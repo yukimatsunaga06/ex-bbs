@@ -37,7 +37,7 @@ public class ArticleController {
 	public String findAll(Model model) {
 		List<Article> articleList = articleRepository.findAllArticles();
 		for(Article article : articleList) {
-			article.setCommentList(commentRepository.findAllComments(article.getId()));
+			article.setCommentList(commentRepository.findAllComment(article.getId()));
 		}
 			model.addAttribute("articleList", articleList);
 		return "board";

@@ -2,6 +2,7 @@
 <html lang="ja" xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
+<title>掲示板</title>
 </head>
 <body>
 
@@ -21,8 +22,8 @@
 </form>
 
 <div th:each="comment:${article.commentList}">
-コメント者名：<pre th:text="${comment.name}"></pre><br>
-コメント内容：<pre th:text="${comment.content}"></pre><br>
+コメント者名：<pre th:text="${comment.name}"></pre><br> 
+コメント内容：<pre th:text="${comment.content}"></pre><br> <!-- preタグはDBの改行を反映 -->
 </div>
 
 <form th:action="@{/2ch/insertComment}"  method="post">
@@ -33,5 +34,6 @@
 </form>
 
 </div>
+<hr>
 </body>
 </html>

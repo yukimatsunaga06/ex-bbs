@@ -28,7 +28,7 @@ public class CommentRepository {
 		template.update(insertSql, param); //追加
 	}
 	
-	public List<Comment> findAllComments(int articleId){
+	public List<Comment> findAllComment(int articleId){
 		String sql="SELECT* FROM comments WHERE article_id=:articleId ORDER BY id DESC";
 		SqlParameterSource param
 		=new MapSqlParameterSource().addValue("articleId",articleId);

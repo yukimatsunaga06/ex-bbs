@@ -16,7 +16,7 @@ import com.example.domain.Article;
 public class ArticleRepository {
 	@Autowired
 	private NamedParameterJdbcTemplate template;
-	
+
 	private static final RowMapper<Article> ARTICLE_ROW_MAPPER
 		=new BeanPropertyRowMapper<>(Article.class);
 	
@@ -42,3 +42,7 @@ public class ArticleRepository {
 	
 	
 }
+	
+	
+
+//http://localhost:8080/ex-bss/2ch
